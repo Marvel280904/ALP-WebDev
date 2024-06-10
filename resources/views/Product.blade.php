@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -69,6 +70,38 @@
                     });
                 });
             });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.add_wish_btn').forEach(function(button) {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        let productId = this.getAttribute('data-id');
+                        fetch("{{ route('wish.add') }}", {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                            },
+                            body: JSON.stringify({
+                                product_id: productId
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert(data.message);
+                                // Optionally update cart UI here
+                            } else {
+                                alert('Something went wrong!');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('An error occurred. Please try again.');
+                        });
+                    });
+                });
+            });
         </script>
 
     </head>
@@ -82,44 +115,22 @@
                         <a class="navbar-brand" href="{{ route('Home') }}"><img src="img/logo1.png" class="logoku"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item dropdown submenu">
+                                <li class="nav-item dropdown submenu ">
                                     <a class="nav-link dropdown-toggle" href="{{ route('Home') }}"> Home </a>
                                 </li>
-                                <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout Method</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="register.html">Checkout Register</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="track.html">Track</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li>
                                 <li class="nav-item dropdown submenu active">
-                                <a class="nav-link" href="{{ route('Product') }}"> Product </a>
+                                    <a class="nav-link" href="{{ route('Product') }}"> Product </a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('cart.show') }}">Cart</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Wishlist') }}">Wishlist</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
                                 <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>
-                                <li class="nav-item dropdown submenu">
-                                    <a><i class="icon-user icons"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Admin') }}">Admin</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}">Customer</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cart_cart"><a href="{{ route('cart.show') }}"><i class="icon-basket icons"></i></a></li>
-                                <li class="wishlist"><a href="{{ route('Wishlist') }}"><i class="icon-heart icons"></i></a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}"><i class="icon-user icons"></i></a></li>
                             </ul>
                         </div>
                     </nav>
@@ -179,7 +190,7 @@
                                                     <ul>
                                                         <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
                                                         <li><a class="add_cart_btn" href="#" data-id="{{ $product->ID_Produk }}">Add To Cart</a></li>
-                                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
+                                                        <li class="p_icon "><a class="add_wish_btn" href="#" data-id="{{ $product->ID_Produk }}"><i class="icon_heart_alt"></i></a></li>
                                                     </ul>
                                                     <h4>{{ $product->Nama_Produk }}</h4>
                                                     <h5>

@@ -53,35 +53,14 @@
                                     <a class="nav-link dropdown-toggle" href="{{ route('Home') }}"> Home </a>
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout Method</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="register.html">Checkout Register</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="track.html">Track</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown submenu">
                                     <a class="nav-link" href="{{ route('Product') }}"> Product </a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('cart.show') }}">Cart</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Wishlist') }}">Wishlist</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
                                 <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>
-                                <li class="nav-item dropdown submenu">
-                                    <a><i class="icon-user icons"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Admin') }}">Admin</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}">Customer</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cart_cart"><a href="{{ route('cart.show') }}"><i class="icon-basket icons"></i></a></li>
-                                <li class="wishlist"><a href="{{ route('Wishlist') }}"><i class="icon-heart icons"></i></a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}"><i class="icon-user icons"></i></a></li>
                             </ul>
                         </div>
                     </nav>
@@ -203,7 +182,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 woman bags">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-1.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/DESERT_COAL_STONE_SUEDE.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -211,15 +190,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>Desert Coal Stone Suede</h4>
+                                    <h5>$320.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 acc shoes">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-2.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/1460_Nappa_Leather_Lace_Up_Boots.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -227,15 +206,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>1460 Nappa Leather Lace Up Boots</h4>
+                                    <h5>$280.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 woman shoes">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-3.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/Ultraboost_1.0_Shoes_White.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -243,15 +222,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>ULTRABOOST 1.0 Shoes</h4>
+                                    <h5>$200.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 woman shoes">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-4.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/RS-X_Soft.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -259,15 +238,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>RS-X Soft</h4>
+                                    <h5>$220.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 woman shoes">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-5.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/Grand_Crosscourt_Modern.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -275,15 +254,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>Grand Crosscourt Modern White Floral Tennis</h4>
+                                    <h5>$340.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 acc shoes bags">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-6.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/Reebok_Classic_Leather.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -291,15 +270,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>Reebok Classic Leather</h4>
+                                    <h5>$210.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 acc bags">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-7.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/Jazz_Original.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -307,15 +286,15 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>Jazz Original</h4>
+                                    <h5><del>$200.00</del>  $170.00</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 acc bags">
                             <div class="l_product_item">
                                 <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-8.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="img/imghagun/Chuck_Taylor_All_Star_Canvas.jpg" alt=""></a>
                                 </div>
                                 <div class="l_p_text">
                                     <ul>
@@ -323,72 +302,8 @@
                                         <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                         <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                     </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 woman bags">
-                            <div class="l_product_item">
-                                <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-1.jpg" alt=""></a>
-                                </div>
-                                <div class="l_p_text">
-                                    <ul>
-                                        <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                        <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                    </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 acc shoes">
-                            <div class="l_product_item">
-                                <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-2.jpg" alt=""></a>
-                                </div>
-                                <div class="l_p_text">
-                                    <ul>
-                                        <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                        <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                    </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 woman shoes">
-                            <div class="l_product_item">
-                                <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-3.jpg" alt=""></a>
-                                </div>
-                                <div class="l_p_text">
-                                    <ul>
-                                        <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                        <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                    </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 woman shoes">
-                            <div class="l_product_item">
-                                <div class="l_p_img">
-                                    <a href=""><img class="img-fluid" src="img/product/l-product-4.jpg" alt=""></a>
-                                </div>
-                                <div class="l_p_text">
-                                    <ul>
-                                        <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                        <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                    </ul>
-                                    <h4>Womens Libero</h4>
-                                    <h5><del>$45.50</del>  $40</h5>
+                                    <h4>Chuck Taylor All Star Canvas</h4>
+                                    <h5><del>$200.00</del>  $180.00</h5>
                                 </div>
                             </div>
                         </div>

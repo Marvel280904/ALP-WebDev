@@ -52,44 +52,22 @@
                         <a class="navbar-brand" href="{{ route('Home') }}"><img src="img/logo1.png" class="logoku"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item dropdown submenu">
+                                <li class="nav-item dropdown submenu ">
                                     <a class="nav-link dropdown-toggle" href="{{ route('Home') }}"> Home </a>
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout Method</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="register.html">Checkout Register</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="track.html">Track</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
+                                    <a class="nav-link" href="{{ route('Product') }}"> Product </a>
                                 </li>
-                                <li class="nav-item dropdown submenu">
-                                <a class="nav-link" href="{{ route('Product') }}"> Product </a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item "><a class="nav-link" href="{{ route('cart.show') }}">Cart</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="{{ route('Wishlist') }}">Wishlist</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
                                 <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>
-                                <li class="nav-item dropdown submenu">
-                                    <a><i class="icon-user icons"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Admin') }}">Admin</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}">Customer</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cart_cart"><a href="{{ route('cart.show') }}"><i class="icon-basket icons"></i></a></li>
-                                <li class="wishlist"><a href="{{ route('Wishlist') }}"><i class="icon-heart icons"></i></a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}"><i class="icon-user icons"></i></a></li>
                             </ul>
                         </div>
                     </nav>
@@ -100,84 +78,65 @@
         
         <!--================Categories Product Area =================-->
         <section class="categories_product_main p_80">
-            <div class="container">
-                <div class="categories_main_inner">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="showing_filter mb-4 d-flex justify-content-between align-items-center">
-                                <h2 class="wishlist-title">Wishlist</h2>
-                                <div class="second_filter d-flex align-items-center">
-                                    <h4 class="mr-2">SORT BY :</h4>
-                                    <select class="selectpicker form-control">
-                                        <option>Name</option>
-                                        <option>Price</option>
-                                        <option>First</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="c_product_grid_details">
-                                <div class="c_product_item mb-4">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="c_product_img">
-                                                <img class="img-fluid" src="img/product/l-product-2.jpg" alt="Nike Max Air Vapor Power">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-6">
-                                            <div class="c_product_text">
-                                                <h3>Nike Max Air Vapor Power</h3>
-                                                <h5>$45.05</h5>
-                                                <ul class="product_rating d-flex">
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                </ul>
-                                                <h6>Available In <span>Stock</span></h6>
-                                                <p>Curabitur semper varius lectus sed consequat. Nam accumsan dapibus sem, sed lobortis nisi porta vitae. Ut quam tortor, facilisis nec laoreet consequat, malesuada a massa. Proin pretium tristique leo et imperdiet.</p>
-                                                <ul class="c_product_btn d-flex align-items-center">
-                                                    <li><a class="add_cart_btn btn btn-primary mr-2" href="#">Add To Cart</a></li>
-                                                    <li class="p_icon"><a href="#"><i class="icon_heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c_product_item mb-4">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="c_product_img">
-                                                <img class="img-fluid" src="img/product/l-product-4.jpg" alt="Max Air Vapor Power">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-6">
-                                            <div class="c_product_text">
-                                                <h3>Max Air Vapor Power</h3>
-                                                <h5>$110.50</h5>
-                                                <ul class="product_rating d-flex">
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                </ul>
-                                                <h6>Available In <span>Stock</span></h6>
-                                                <p>Curabitur semper varius lectus sed consequat. Nam accumsan dapibus sem, sed lobortis nisi porta vitae. Ut quam tortor, facilisis nec laoreet consequat, malesuada a massa. Proin pretium tristique leo et imperdiet.</p>
-                                                <ul class="c_product_btn d-flex align-items-center">
-                                                    <li><a class="add_cart_btn btn btn-primary mr-2" href="#">Add To Cart</a></li>
-                                                    <li class="p_icon"><a href="#"><i class="icon_heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="container">
+        <div class="categories_main_inner">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="showing_filter mb-4 d-flex justify-content-between align-items-center">
+                        <h2 class="wishlist-title">Wishlist</h2>
+                        <div class="second_filter d-flex align-items-center">
+                            <h4 class="mr-2">SORT BY :</h4>
+                            <select class="selectpicker form-control">
+                                <option>Name</option>
+                                <option>Price</option>
+                                <option>First</option>
+                            </select>
                         </div>
+                    </div>
+                    <div class="c_product_grid_details">
+                        @if (!empty($wishlist) && count($wishlist) > 0)
+                            @foreach ($wishlist as $item)
+                            <div class="c_product_item mb-4">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="c_product_img">
+                                            <img class="img-fluid" src="{{ asset('img/imghagun/' . $item['image']) }}" alt="{{ $item['name'] }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-6">
+                                        <div class="c_product_text">
+                                            <h3>{{ $item['name'] }}</h3>
+                                            <h5>${{ number_format($item['price'], 2) }}</h5>
+                                            <ul class="product_rating d-flex">
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            </ul>
+                                            <h6>Available In <span>Stock</span></h6>
+                                            <p>Curabitur semper varius lectus sed consequat. Nam accumsan dapibus sem, sed lobortis nisi porta vitae. Ut quam tortor, facilisis nec laoreet consequat, malesuada a massa. Proin pretium tristique leo et imperdiet.</p>
+                                            <ul class="c_product_btn d-flex align-items-center">
+                                                <li><a class="add_cart_btn btn btn-primary mr-2" href="#">Add To Cart</a></li>
+                                                <li class="p_icon"><a href="#"><i class="icon_heart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        @else
+                            <p>Your wishlist is empty.</p>
+                        @endif
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
+
         <!--================End Categories Product Area =================-->
         
         <!--================Footer Area =================-->

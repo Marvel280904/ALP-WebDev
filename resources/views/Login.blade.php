@@ -45,7 +45,6 @@
                         <a class="navbar-brand" href="{{ route('Home') }}"><img src="img/logo1.png" class="logoku"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,35 +53,14 @@
                                     <a class="nav-link dropdown-toggle" href="{{ route('Home') }}"> Home </a>
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout Method</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="register.html">Checkout Register</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="track.html">Track</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
+                                    <a class="nav-link" href="{{ route('Product') }}"> Product </a>
                                 </li>
-                                <li class="nav-item dropdown submenu">
-                                <a class="nav-link" href="{{ route('Product') }}"> Product </a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('cart.show') }}">Cart</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Wishlist') }}">Wishlist</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
                                 <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>
-                                <li class="nav-item dropdown submenu">
-                                    <a><i class="icon-user icons"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Admin') }}">Admin</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}">Customer</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cart_cart"><a href="{{ route('cart.show') }}"><i class="icon-basket icons"></i></a></li>
-                                <li class="wishlist"><a href="{{ route('Wishlist') }}"><i class="icon-heart icons"></i></a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('Login') }}"><i class="icon-user icons"></i></a></li>
                             </ul>
                         </div>
                     </nav>
